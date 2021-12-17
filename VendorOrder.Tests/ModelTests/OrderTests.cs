@@ -46,6 +46,28 @@ namespace VendorOrder.Tests
       Assert.AreEqual(description, newOrder.Description);
     }
 
+    [TestMethod]
+    public void OrderConstructor_GetOrderPrice_Int()
+    {
+      string title = "test";
+      string description = "Sour Bread";
+      int price = 5;
+      string date = "date";
+      Order newOrder = new Order(title, description, date, price);
+      Assert.AreEqual(price, newOrder.Price);
+    }
+
+    [TestMethod]
+    public void OrderConstructor_GetOrderDate_Date()
+    {
+      string title = "test";
+      string description = "Sour Bread";
+      int price = 0;
+      string date = "December 17";
+      Order newOrder = new Order(title, description, date, price);
+      Assert.AreEqual(date, newOrder.Date);
+    }
+
 
   }
 }
