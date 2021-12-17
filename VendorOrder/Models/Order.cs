@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace VenderOrder.Modelse
+namespace VendorOrder.Models
 {
     public class Order
     {
@@ -19,7 +19,8 @@ namespace VenderOrder.Modelse
         Price = price;
         _instances.Add(this);
         Id = _instances.Count;
-
       }
+
+      
     }
 }
