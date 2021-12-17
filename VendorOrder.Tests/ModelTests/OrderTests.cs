@@ -35,6 +35,17 @@ namespace VendorOrder.Tests
       Assert.AreEqual(title, newOrder.Title);
     }
 
+    [TestMethod]
+    public void OrderConstructor_GetDescriptionOrder_Description()
+    {
+      string title = "test";
+      string description = "Sour Bread";
+      int price = 0;
+      string date = "date";
+      Order newOrder = new Order(title, description, date, price);
+      Assert.AreEqual(description, newOrder.Description);
+    }
+
 
   }
 }
