@@ -1,13 +1,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using VenderOrder.Models;
+using VendorOrder.Models;
 using System;
 
-
-namespace VenderOrder.Tests
+namespace VendorOrder.Tests
 {
   [TestClass]
-  public class OrderTests : IDisposable
+  public class OrderTests :IDisposable
   {
     public void Dispose()
     {
@@ -19,10 +18,9 @@ namespace VenderOrder.Tests
     {
       string title = "test";
       string description = "test";
-      string date = "date";
       int price = 0;
-      Order newOrder = new Order(title, description, date, price);
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
-  }
 }
