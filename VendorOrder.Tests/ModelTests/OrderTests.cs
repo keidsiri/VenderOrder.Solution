@@ -68,6 +68,15 @@ namespace VendorOrder.Tests
       Assert.AreEqual(date, newOrder.Date);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnEmptyList_OrderList()
+    {
+      List<Order> emptyList = new List<Order>{};
+      List<Order> resultList = Order.GetAll();
+      CollectionAssert.AreEqual(emptyList,resultList);
+    }
+
+
 
   }
 }
