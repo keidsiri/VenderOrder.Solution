@@ -73,7 +73,7 @@ namespace VendorOrder.Tests
     {
       List<Order> emptyList = new List<Order>{};
       List<Order> resultList = Order.GetAll();
-      CollectionAssert.AreEqual(emptyList,resultList);
+      CollectionAssert.AreEqual(emptyList, resultList);
     }
 
 
