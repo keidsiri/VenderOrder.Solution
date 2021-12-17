@@ -10,7 +10,7 @@ namespace VendorOrder.Tests
   {
     public void Dispose()
     {
-      Order.ClearAll();
+      
     }
 
     [TestMethod]
@@ -20,7 +20,8 @@ namespace VendorOrder.Tests
       string description = "test";
       int price = 0;
       string date = "date";
-      Order newOrder = new Order(title, description, price, date);
+      Order newOrder = new Order(title, description, date, price);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+  }
 }
