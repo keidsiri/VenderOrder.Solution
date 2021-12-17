@@ -4,37 +4,39 @@ namespace VendorOrder.Models
 {
   public class Vendor
   {
-    // private static List<Artist> _instances = new List<Artist>() { };
-    // public string Name { get; set; }
-    // public int Id { get; }
-    // public List<Album> Albums { get; }
+    private static List<Vendor> _instances = new List<Vendor>() { };
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public int Id { get; }
+    public List<Order> Orders { get; set; }
 
-    // public Artist(string name)
-    // {
-    //   Name = name;
-    //   _instances.Add(this);
-    //   Id = _instances.Count;
-    //   Albums = new List<Album>() { };
-    // }
+    public Vendor(string name, string description)
+    {
+      Name = name;
+      Description = description;
+      _instances.Add(this);
+      Id = _instances.Count;
+      Orders = new List<Order>() { };
+    }
 
-    // public static List<Artist> GetAll()
-    // {
-    //   return _instances;
-    // }
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
 
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
 
-    // public static Artist Find(int id)
-    // {
-    //   return _instances[id - 1];
-    // }
+    public static Vendor Find(int id)
+    {
+      return _instances[id - 1];
+    }
 
-    // public void AddAlbum(Album album)
-    // {
-    //   Albums.Add(album);
-    // }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
