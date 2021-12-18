@@ -76,6 +76,20 @@ namespace VendorOrder.Tests
       CollectionAssert.AreEqual(emptyList, resultList);
     }
 
+    // [TestMethod]
+    // public void OrderConstructor_AutoAddsOrderToList_List()
+    // {
+    //   string title = "title";
+    //   string description = "description";
+    //   int price = 10;
+    //   string date = "date";
+    //   Order newOrder = new Order(title, description, date, price);
+    //   List<Order> newList = new List<Order>{};
+    //   List<Order> testList = Order.GetAll();
+    //   newList.Add(newOrder);
+    //   CollectionAssert.AreEqual(newList,testList);
+    // }
+
 
 
   }
