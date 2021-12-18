@@ -1,4 +1,4 @@
- using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace VendorOrder.Models
 {
@@ -14,9 +14,9 @@ namespace VendorOrder.Models
     {
       Name = name;
       Description = description;
-      _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Order>() { };
+      _instances.Add(this);
     }
 
     public static List<Vendor> GetAll()
