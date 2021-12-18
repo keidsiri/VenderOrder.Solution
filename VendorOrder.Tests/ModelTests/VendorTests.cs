@@ -31,5 +31,16 @@ namespace VendorOrder.Tests
       Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(name, newVendor.Name);
     }
+
+    [TestMethod]
+    public void VendorConstructor_ReturnVendorDescription_String()
+    {
+      string name = "Kate Bakery";
+      string description = "Modern Bakery Shop";
+      Vendor newVendor = new Vendor(name, description);
+      Assert.AreEqual(description, newVendor.Description);
+    }
+
+
   }
 }
