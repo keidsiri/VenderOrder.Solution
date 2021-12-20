@@ -4,18 +4,19 @@ namespace VendorOrder.Models
 {
   public class Vendor
   {
-    private static List<Vendor> _instances = new List<Vendor>() { };
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
+    private static int _instanceNumber = 0;
     public List<Order> Orders { get; set; }
+    private static List<Vendor> _instances = new List<Vendor> {};
 
     public Vendor(string name, string description)
     {
       Name = name;
       Description = description;
-      Id = _instances.Count;
-      Orders = new List<Order>() { };
+      Id = _instanceNumber ++;
+      Orders = new List<Order> {};
       _instances.Add(this);
     }
 
@@ -27,11 +28,12 @@ namespace VendorOrder.Models
     public static void ClearAll()
     {
       _instances.Clear();
+      _instanceNumber = 0;
     }
 
     public static Vendor Find(int id)
     {
-      return _instances[id - 1];
+      return _instances.Find(vendor => vendor.Id == id);
     }
 
     public void AddOrder(Order order)
