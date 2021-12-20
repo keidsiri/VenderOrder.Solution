@@ -68,6 +68,17 @@ namespace VendorOrder.Tests
       Assert.AreEqual(date, newOrder.Date);
     }
 
+    [TestMethod]
+    public void OrderConstructor_GetOrderID_Int()
+    {      
+      string title = "title";
+      string description = "description";
+      string date = "date";
+      int price = 10;
+      Order newOrder = new Order(title, description, date, price);
+      Assert.AreEqual(0,  newOrder.Id);
+    }
+
     // [TestMethod]
     // public void GetAll_ReturnEmptyList_OrderList()
     // {
