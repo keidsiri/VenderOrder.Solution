@@ -51,6 +51,26 @@ namespace VendorOrder.Tests
       Assert.AreEqual(0, result);
     }
 
+    [TestMethod]
+    public void VendorConstructor_ConstructorAssignsUniqueIds_Int()
+    {      
+      string name = "Vendor1";
+      string description = "Description1";
+      Vendor newVendor = new Vendor(name, description);
+      string name2 = "Vendor2";
+      string description2 = "Description2";
+      Vendor newVendor2 = new Vendor(name2, description2);
+      Assert.AreEqual(1, newVendor2.Id);
+    }
+
+    [TestMethod]
+    public void List_ReturnEmptyList_True()
+    {
+      List<Vendor> emptyList = new List<Vendor>{};
+      List<Vendor> testList = Vendor.GetAll();
+      CollectionAssert.AreEqual(emptyList,testList);
+    }
+
 
   }
 }
