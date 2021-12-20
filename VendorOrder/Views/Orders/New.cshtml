@@ -2,6 +2,8 @@
   Layout = "_Layout";
 }
 
+<h1>Add a new Order for @Model.Name</h1>
+
 <form action='/vendors/@Model.Id/orders' method='post'>
   <input id='vendorId' name='vendorId' type='hidden' value='@Model.Id'>
   <label for='orderTitle'>Order Title</label>
@@ -16,5 +18,5 @@
   <label for="orderPrice">Order Price: $</label>
   <input id="orderPrice" name="orderPrice" type="int">
   
-  <button type='submit'>Add Order</button>
+  <button type='submit' class='btn btn-outline-info'></button>>Add Order</button>
 </form>

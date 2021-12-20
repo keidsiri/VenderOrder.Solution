@@ -74,10 +74,26 @@ namespace VendorOrder.Tests
       string title = "title";
       string description = "description";
       string date = "date";
-      int price = 10;
+      int price = 5;
       Order newOrder = new Order(title, description, date, price);
       Assert.AreEqual(0,  newOrder.Id);
     }
+
+    // [TestMethod]
+    // public void OrderConstructor_GetOrdersIDs_Int()
+    // {      
+    //   string title = "title";
+    //   string description = "description";
+    //   string date = "date";
+    //   int price = 5;
+    //   Order newOrder = new Order(title, description, date, price);
+    //   string title2 = "title";
+    //   string description2 = "description";
+    //   string date2 = "date";
+    //   int price2 = 10;
+    //   Order newOrder2 = new Order(title2, description2, date2, price2);
+    //   Assert.AreEqual(1, newOrder2.Id);
+    // }
 
     // [TestMethod]
     // public void GetAll_ReturnEmptyList_OrderList()
