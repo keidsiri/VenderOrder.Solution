@@ -41,6 +41,17 @@ namespace VendorOrder.Tests
       Assert.AreEqual(description, newVendor.Description);
     }
 
+    [TestMethod]
+    public void GetId_ReturnsCategoryId_Int()
+    {
+      
+      string name = "Name";
+      string description = "Description";
+      Vendor newVendor = new Vendor( name, description);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
+    }
+
 
   }
 }
