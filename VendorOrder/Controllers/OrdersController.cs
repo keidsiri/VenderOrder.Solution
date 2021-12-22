@@ -4,7 +4,7 @@ using VendorOrder.Models;
 
 namespace VendorOrder.Controllers
 {
-  public class OrderController : Controller
+  public class OrdersController : Controller
   {
 
     [HttpGet("/vendors/{vendorId}/orders/new")]
